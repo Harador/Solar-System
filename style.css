@@ -1,0 +1,73 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    overflow: hidden;
+    background: url(./img.jpg);
+}
+
+#canvas{
+    width: 100%;
+    height: 100%;
+}
+
+#canvasBack{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.menu-but{
+    position: absolute;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    border: 1px solid white;
+    padding: 10px;
+    top: 10px;
+    left: 10px;
+}
+.shadow{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background-color: rgba(87, 86, 86, 0.918);
+}
+.active{
+    display: block;
+}
+.menu-wrapper{
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: 60px;
+}
+.menu{
+    position: relative;
+    margin: 0 auto;
+    top: 150px;
+    z-index: 2;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+select{
+    margin-bottom: 10px;
+    padding: 10px;
+}
+#submit{
+    padding: 5px;
+}
