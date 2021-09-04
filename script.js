@@ -7,11 +7,6 @@ document.querySelector('.menu-but').addEventListener('click',()=>{
 })
 
 document.getElementById('submit').addEventListener('click', ()=>{
-    canvas.width = document.documentElement.clientWidth;
-canvas.height = document.documentElement.clientHeight;
-
-canvasBack.width = document.documentElement.clientWidth;
-canvasBack.height = document.documentElement.clientHeight;
 
     const pl1 = planets[sel1.value];
     const pl2 = planets[sel2.value];
