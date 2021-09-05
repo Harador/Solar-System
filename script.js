@@ -35,13 +35,12 @@ canvasBack.height = document.documentElement.clientHeight;
 
 const cw = canvas.width;
 const ch = canvas.height;
-let angle = 0;
 const scale = cw/1200;
 
 
 class Planet{
     x = 0;
-    y = ch/2;
+    y = 0;
     angle = 0;
 
     constructor(
@@ -52,15 +51,15 @@ class Planet{
         this.sp = 365.24/sp,
         this.c = c
 
-        this.x = cw/2 - Math.cos(angle) * this.R
-        this.y = cw/2 - Math.sin(angle) * this.R
+        this.x = cw/2 * this.R
+        this.y = cw/2 * this.R
     }
 }
 
-const merc = new Planet(0.4,4879, 88,'#705858');
-const venus = new Planet(0.7,12104, 224.7,'#854040');
-const earth = new Planet(1,12756, 365.24,'green');
-const mars = new Planet(1.5,6792, 687,'red');
+const merc  = new Planet(0.4, 4879,  88,    '#705858');
+const venus = new Planet(0.7, 12104, 224.7, '#854040');
+const earth = new Planet(1,   12756, 365.24,'green');
+const mars  = new Planet(1.5, 6792,  687,   'red');
 
 const planets = {
     merc, venus, earth, mars
@@ -76,12 +75,6 @@ setInterval(()=>{
     drawPlanets();
     drawLine(selPlanet1, selPlanet2);
 }, 10)
-
-// setInterval(()=>{
-//     drawLine();
-// }, 10)
-
-
 
 function drawLine(pl1, pl2){
     ctxBack.beginPath();
